@@ -1,0 +1,155 @@
+@media (max-width: 1030px) {
+  section.seccion1 {
+    height: 633px;
+  }
+  section.seccion1 .cont-center .center {
+    width: 100%;
+    margin-top: 203px;
+    display: inline-block;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content {
+    width: 960px;
+    margin: 67px auto 0;
+    padding: 50px 15px;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content .detail .image {
+    width: 522px;
+    height: 615px;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content .detail .image .cont-image2 {
+    width: 390px;
+    height: 500px;
+    left: -335px;
+  }
+  .st-accordion ul li section.seccion3 .controles {
+    width: 65px;
+  }
+  .st-accordion ul li section.seccion3 .controles .cont-center {
+    background: transparent;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content {
+    padding: 50px 15px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left {
+    width: 290px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left img {
+    width: 100%;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left p {
+    padding-top: 10px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left p a {
+    width: 43%;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .galeria blockquote {
+    margin: 6px 4px;
+  }
+  .st-accordion ul li .mroption .button {
+    right: 10px;
+  }
+}
+
+@media (max-width: 770px) {
+  .main {
+    max-width: 100%;
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  section.seccion1 {
+    height: 889px;
+  }
+  section.seccion1 .cont-center .center {
+    margin-top: 365px;
+  }
+  section.seccion1 .cont-center .center .imagen1 {
+    width: 285px;
+    height: 612px;
+    left: -3px;
+  }
+  section.seccion1 .cont-center .center .imagen1 img {
+    width: 100%;
+  }
+  section.seccion1 .cont-center .center .imagen2 {
+    width: 255px;
+    height: 286px;
+    right: 0;
+  }
+  section.seccion1 .cont-center .center .imagen2 img {
+    width: 100%;
+  }
+  section.seccion1 .cont-center .center blockquote {
+    width: 520px;
+    height: 448px;
+  }
+  section.seccion1 .cont-center .center blockquote p {
+    font-size: 110px;
+    padding-top: 70px;
+  }
+  section.seccion1 .cont-center .center blockquote p span {
+    font-size: 97px;
+    margin-bottom: 12px;
+  }
+  section.seccion1 .cont-center .center blockquote p img {
+    padding: 30px 82px 0 0;
+  }
+  .st-accordion ul li section.seccion2 .cont-center .content-up {
+    width: 85%;
+    margin-right: 50px;
+    padding: 50px 30px;
+  }
+  .st-accordion ul li section.seccion2 .cont-center .content-up div.detail {
+    width: 335px;
+    padding: 25px 0 0 0px;
+  }
+  .st-accordion ul li section.seccion2 .cont-center .content-center {
+    width: 85%;
+  }
+  .st-accordion ul li section.seccion2 .cont-center .content-bottom {
+    width: 85%;
+    margin-left: 50px;
+  }
+  .st-accordion ul li section.seccion2 .cont-center .album-photo, .st-accordion ul li section.seccion2 .cont-center .image-chica {
+    display: none;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content {
+    width: 100%;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content .detail .parrafo {
+    width: 364px;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content .detail .parrafo br {
+    display: none;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content .detail .image {
+    width: 350px;
+  }
+  .st-accordion ul li section.seccion3 .cont-center .content .detail .image .cont-image2 {
+    height: 480px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content {
+    padding: 50px 15px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content p br {
+    display: none;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left {
+    width: 250px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left p {
+    padding-top: 10px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-left p a {
+    width: 46%;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .publicidad .seccion-right {
+    width: 464px;
+  }
+  .st-accordion ul li section.seccion4 .cont-center .content .galeria blockquote {
+    width: 167px;
+    height: 167px;
+    margin: 6px 4px;
+  }
+}

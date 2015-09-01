@@ -1,0 +1,131 @@
+@media(max-width: 1030px){
+	section.seccion1{
+		height: 633px;
+		.cont-center{
+			.center {
+				width: 100%;
+				margin-top: 203px;
+				display: inline-block;
+			}
+		}
+	}
+	.st-accordion ul li {
+		section.seccion3{
+			.cont-center .content{ 
+				width: 960px; 
+				margin: 67px auto 0; padding: 50px 15px; 
+				.detail .image { 
+					width: 522px; height: 615px; 
+					.cont-image2{ width: 390px; height: 500px; left: -335px; }
+				}
+			}
+			.controles{
+				width: 65px;
+				.cont-center{
+					background: transparent;
+				}
+			}
+		}
+		section.seccion4{
+			.cont-center .content{
+				padding: 50px 15px;
+				.publicidad{
+					.seccion-left{ 
+						width: 290px; 
+						img{ width: 100%; }
+						p{ 
+							padding-top: 10px; 
+							a{ width: 43%; }
+						}
+					}
+				}
+				.galeria blockquote{ margin: 6px 4px; }
+			} 
+		}
+		.mroption .button{right: 10px;}
+	}
+}
+@media(max-width: 770px){
+	.main{ 
+		max-width: 100%; min-width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;  
+	}
+	section.seccion1{
+		height: 889px;
+		.cont-center .center{
+			margin-top: 365px;			
+			.imagen1{
+				width: 285px; height: 612px;
+				left: -3px;
+				img{width: 100%;}
+			}
+			.imagen2{
+				width: 255px; height: 286px;
+				right: 0;
+				img{width: 100%;}
+			}
+			blockquote{
+				width: 520px; height: 448px;
+				p{
+					font-size: 110px;
+					padding-top: 70px;
+					span{ font-size: 97px; margin-bottom: 12px; }
+					img{ padding: 30px 82px 0 0; }
+				}
+			}
+		}
+	}
+	.st-accordion ul li{ 
+		section.seccion2{
+			.cont-center{
+				.content-up{ 
+					width: 85%; 
+					margin-right: 50px; padding: 50px 30px; 
+					div.detail{ width: 335px; padding: 25px 0 0 0px; }
+				}
+				.content-center{ width: 85%; }
+				.content-bottom{ width: 85%; margin-left: 50px; }
+
+				.album-photo, .image-chica { display: none; }
+			} 
+		}
+		section.seccion3{
+			.cont-center{
+				.content{ 
+					width: 100%; 
+					.detail{
+						.parrafo{
+							width: 364px;
+							br{ display: none;}
+						}
+						.image{ 
+							width: 350px; 
+							.cont-image2{ height: 480px; }
+						}
+					}
+				}
+			}
+		}
+		section.seccion4{
+			.cont-center .content{
+				padding: 50px 15px;
+				p{
+					br{ display: none; }
+				}
+				.publicidad{
+					.seccion-left{ 
+						width: 250px; 
+						p{ 
+							padding-top: 10px; 
+							a{ width: 46%; }
+						}
+					}
+					.seccion-right{ width: 464px; } 
+				}
+				.galeria blockquote{ width: 167px; height: 167px; margin: 6px 4px; }
+			} 
+		}
+	}
+}

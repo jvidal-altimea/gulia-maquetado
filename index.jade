@@ -8,7 +8,6 @@ html(lang="es")
 		link(rel="stylesheet", type="text/css", href="css/style.css")
 		link(rel="stylesheet", type="text/css", href="css/responsive.css")
 		link(rel="stylesheet", type="text/css", href="https://fontastic.s3.amazonaws.com/bkQjoWLeS6TGYqbaqSpsfG/icons.css")
-		<!--[if gte IE 9]> <style type="text/css"> .gradient { filter: none; } </style> <![endif]-->
 	body        
 		#guliacd.st-accordion
 			section#inicio.contenido-total.seccion1
@@ -52,7 +51,9 @@ html(lang="es")
 										.image
 											img(src="image/producto-seecion1.png", alt="")
 									.content-center
-										h1 Sé como Flo!
+										h1.view_dt 
+											|Sé como Flo!
+										h1.view_mb: img(src="image/titulo_001.png", alt="")
 										p 
 											b Ella es una chica que se lanza por las cosas que quiere.
 											|Eso la hizo ganar Look Cyzone en el 2015 y es una chica con
@@ -212,7 +213,8 @@ html(lang="es")
 													a(href="javascript:;", alt="").icon-twit
 
 										.view_mb
-											h2 GANA UNA SALIDA CON LOS CHICOS DE PISO 21!!!
+											h2.view_dt GANA UNA SALIDA CON LOS CHICOS DE PISO 21!!!
+											h2.view_mb: img(src="image/titulo_002.png", alt="")
 											.image: img(src="image/seccion4-image01.jpg", alt="")
 											h3 COMO ?!
 											p
@@ -258,8 +260,7 @@ html(lang="es")
 							span: img(src="image/icons/arrow-up.png", alt="")
 						a(href="javascript:;", alt="").seccion1
 							span: img(src="image/icons/icon_home.png", alt="")
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-		script(src="http://www.youtube.com/player_api")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
 		script(src="js/jquery.accordion.js")
 		script(src="js/jquery.easing.1.3.js")
 		script(src="js/jquery.bxslider.min.js")

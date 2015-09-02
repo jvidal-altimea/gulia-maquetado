@@ -49,6 +49,7 @@ body{
 	background: #fff;
 	font-size: 14px; font-weight: normal;
 	overflow-x: hidden;
+	position: relative;
 	& > *{
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -63,6 +64,8 @@ body{
 	position: absolute; z-index: 1; left: 0; top: 0;
 	.center{display: table-cell; vertical-align: middle;}
 }
+.view_dt{ display: block !important; } .view_mb{ display: none !important; }
+
 .st-accordion ul li{
 	line-height: 0;
 	a.ancla-area{
@@ -71,17 +74,17 @@ body{
 		overflow: hidden;
 		position: relative; z-index: 25;
 		span{ 
-			color: #fff; font-size: 15px;
+			color: #fff; font-family: 'frutiger'; font-size: 15px;
 			text-align: center;
 			display: table-cell; vertical-align: middle;
 			span{
 				width: 140px;
-				text-align: left;
+				text-align: left; line-height: 2;
 				display: inline-block;
 				i{
 					width: 25px; height: 25px;
 					text-align: center;
-					margin-right: 10px;
+					margin: -4px 10px 0 0;
 					display: inline-block; vertical-align: middle;
 					img{ width:100%; display: inline-block; vertical-align: top; }
 				} 
@@ -102,14 +105,24 @@ body{
 			display: inline-table;
 			position: absolute; top: -39px; right: 0;
 			span{
-				display: table-cell; vertical-align: middle;
+				display: table-cell; vertical-align: middle;				
+				-webkit-transition: all 0.2s;
+				-moz-transition: all 0.2s;
+				-ms-transition: all 0.2s;
+				-o-transition: all 0.2s;
+				transition: all 0.2s;
 				img{ display: inline-block; }
+			}
+			&.active span{
+				-webkit-transform: rotate(45deg); 
+				-moz-transform: rotate(45deg);  
+				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /*for IE*/
 			}
 		}
 	}
 }
 .controles{
-	width: 60px; height: 100%;
+	_width: 60px; height: 100%;
 	text-align: center;
 	padding: 45px 0 0 0;
 	display: inline-block;
@@ -119,7 +132,7 @@ body{
 	box-sizing: border-box;  
 	.cont-center{
 		margin: 0 !important; padding: 0 !important;
-		overflow: hidden;
+		_overflow: hidden;
 		position: absolute !important;
 		display: inline-table !important; vertical-align: middle !important;
 		a{
@@ -145,7 +158,7 @@ body{
 			-o-transition-delay: 0.5s;
 			transition-delay: 0.5s;
 			&.seccion2, &.seccion3, &.seccion4{ 
-				margin: -95px 0 0 3px; 
+				_margin: -95px 0 0 3px; margin: -95px 0 0 0;
 				position: absolute; z-index: 15; top: 50%;
 				-webkit-transition-delay: 0.65s;
 				-moz-transition-delay: 0.65s;
@@ -157,7 +170,7 @@ body{
 			// 	margin: -29px 0 0 3px; 
 			// 	position: absolute; z-index: 15; top: 50%;
 			// }
-			&.active{ left: -3px; opacity: 1; }
+			&.active{ left: -68px; _left: -2px; opacity: 1; }
 			span{
 				display: table-cell; vertical-align: middle;
 				img{ width: 50%; }
@@ -173,15 +186,26 @@ section.seccion1{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	width: 100%; height: 515px;
+	width: 100%; height: 100vh; _height: 515px;
 	text-align: center;
+	_padding-bottom: 135px;
 	overflow: hidden;
 	position: relative; top: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	-ms-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
+	.cont-center{
+		_padding-bottom: 135px;
+		.center{
+			vertical-align: bottom;
+			padding-bottom: 220px; _padding-bottom: 85px;
+		}
+	}
 	.logo{
 		width: 100%;
 		text-align: center;
@@ -195,12 +219,13 @@ section.seccion1{
 	}
 	blockquote{
 		background: #fff;
-		width: 460px; height: 355px;
+		width: 478px; height: 355px;
 		text-align: center;
-		margin-top: -10px;
+		margin-top: 0;
 		display: inline-block; vertical-align: top;
 		position: relative; z-index: 5;
 		p{
+			width: 100%;
 			color: $morado; font-family: 'bebasneue'; font-size: 87px; font-weight: normal;
 			line-height: 73px;
 			margin: 0; padding: 50px 60px 0 70px;
@@ -223,538 +248,546 @@ section.seccion1{
 }
 /*-----------*/
 
-.st-accordion ul li{
-	/*Seccion2*/
-	section.seccion2{
-		background: url('../image/bg-seccion1.jpg') center no-repeat $mora;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		width: 100%; _height: 515px;
-		text-align: center;
-		.cont-center{
-			width: 100%;
+.st-accordion ul{
+    width: 100%;
+    position: relative; top: -135px; bottom: 0; margin-bottom: -135px;
+	li{
+		/*Seccion2*/
+		section.seccion2{
+			background: url('../image/bg-seccion1.jpg') center no-repeat $mora;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			width: 100%; _height: 515px;
 			text-align: center;
-			padding: 35px 0;
-			display: inline-block; vertical-align: top;
-			position: relative; z-index: 10;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;  
-			.content-up{
-				background: $gris;
-				width: 740px; height: 355px;
-				text-align: left;
-				margin-right: 133px; padding: 50px 60px;
+			.cont-center{
+				width: 100%;
+				text-align: center;
+				padding: 35px 0;
 				display: inline-block; vertical-align: top;
-				position: relative;
+				position: relative; z-index: 10;
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;  
-				div{
+				.content-up{
+					background: $gris;
+					width: 740px; height: 355px;
+					text-align: left;
+					margin-right: 133px; padding: 50px 60px;
 					display: inline-block; vertical-align: top;
 					position: relative;
 					-webkit-box-sizing: border-box;
 					-moz-box-sizing: border-box;
 					box-sizing: border-box;  
-					&.detail{
-						width: 385px; 
-						text-align: right;
-						padding: 25px 0 0 50px;
-						z-index: 15;
-						-webkit-box-sizing: border-box;
-						-moz-box-sizing: border-box;
-						box-sizing: border-box;  
-						h1{
-							color: $morado; font-family: 'bebasneue'; font-size: 36px; font-weight: normal;
-							padding-bottom: 15px;
-							display: block; vertical-align: top;
-						}
-						p{
-							color: $morado; font-family: 'frutiger'; font-size: 19px; font-weight: lighter;
-							line-height: normal;
-							margin: 0; padding: 0;
-							display: block; vertical-align: top;
-						}
-						a{
-							background: $morado;
-							width: 175px; height: 30px;
-							color: #fff; font-family: 'frutiger'; font-size: 16px; font-weight: normal;
-							text-align: center; line-height: 30px;
-							display: inline-block;
-							position: absolute; bottom: -90px; right: -76px;
-							-webkit-border-radius: 30px;
-							-moz-border-radius: 30px;
-							border-radius: 30px;
-							overflow: hidden;
-							i{
-								height: auto;
-								font-size: 0; line-height: normal;
-								margin: 10px 13px;
-								display: inline-block;
-								position: absolute; top: 0; right: 0;
-								&:before{
-									content: '';
-									width: 0; height: 0;
-									border-top: 5px solid transparent;
-									border-left: 10px solid #fff;
-									border-bottom: 5px solid transparent;
-									display: inline-block; vertical-align: top;
-								}
-							}
-						}
-					}
-					&.image{
-						margin: 38px 30px 0;
-						position: absolute; z-index: 5; top: 0; right: 0;
-					}
-				}
-			}
-			.content-center{
-				background: $gris;
-				width: 765px; height: 190px;
-				margin: 30px 0; padding: 35px 60px;
-				display: inline-block; vertical-align: top;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;  
-				h1{
-					color: $morado; font-family: 'bebasneue'; font-size: 55px; font-weight: normal;
-					display: block; vertical-align: top;
-				}
-				p{
-					color: $morado; font-family: 'frutiger'; font-size: 16px; font-weight: lighter;
-					line-height: normal;
-					margin: 0; padding: 0;
-					display: block; vertical-align: top;
-					b{
-						color: $morado; font-family: 'frutigerbold'; font-size: 17.5px;
-						display: block; vertical-align: top;
-						&:nth-child(2){font-size: 22px;}
-					}
-				}
-			}
-			.content-bottom{
-				background: url('../image/degrade_001.jpg') center $gris;
-				background-size: 845px auto;
-				width: 845px; height: 395px;
-				padding: 0 60px;
-				display: inline-block; vertical-align: top;
-				position: relative;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;  
-				.carrusel{
-					width: 100%;
-					display: block; vertical-align: top;
-					.slide{
-						height: 395px;
+					div{
+						display: inline-block; vertical-align: top;
 						position: relative;
-						.centrador{
-							width: 100%; height: 100%;
-							display: inline-table;
-							position: absolute; left: 0; top: 0;
-							.center{ display: table-cell; vertical-align: middle;}
-						}
-						.image{
-							width: 100%;
-							display: inline-block; vertical-align: top;
-							img{ display: inline-block; vertical-align: top; }
-						}
-						.detail{
-							width: 100%;
-							display: inline-block; vertical-align: top;
-							h2{
-								color: #fff; font-family: 'frutigerbold'; font-size: 25px; font-weight: normal;
-								padding-top: 25px;
-								display: block; vertical-align: top;
-							}
-							p{
-								color: #fff; font-family: 'frutiger'; font-size: 16px; font-weight: lighter;
-								font-style: italic; line-height: 25px;
-								margin: 0; padding-top: 15px;
-								display: block; vertical-align: top;
-								b{ 
-									font-family: 'frutigerbold'; font-size: 20px;
-									font-style: normal;
-									padding-top: 15px;
-									display: block; vertical-align: top;
-								}
-							}
-						}
-					}
-				}
-			}
-			.album-photo{
-				width: 308px; height: 665px;
-				display: inline-block; vertical-align: top;
-				position: absolute; z-index: 10; bottom: 15px; left: 0;
-				& > div{
-					width: 100%;
-					text-align: center;
-					display: inline-block; vertical-align: top;
-					&.group1{
-						padding-left: 25px; 
 						-webkit-box-sizing: border-box;
 						-moz-box-sizing: border-box;
 						box-sizing: border-box;  
-						img{ width: 220px; }
-					}
-					&.group3{
-						img{ width: 220px; }
-					}
-					img{ display: inline-block; vertical-align: top; }
-				}
-
-			}
-			.image-chica{
-				width: 475px; height: 856px;
-				display: inline-block; vertical-align: top;
-				position: absolute; z-index: 10; bottom: -35px; right: -34px;
-				img{ width: 100%; height: 100%; }
-			}
-		}
-	}
-	/*-----------*/
-
-	/*Seccion3*/
-	section.seccion3{
-		background: $morado;
-		width: 100%;
-		text-align: center;
-		.cont-center{
-			background: #f0f0f0;
-			width: 100%;
-			text-align: center;
-			margin-top: 0; padding: 35px 0 215px;
-			display: inline-block; vertical-align: top;
-			position: relative; z-index: 10;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;  
-			h1, h2, p{ 
-				width: 80%; 
-				font-family: 'bebasneue'; font-weight: normal;
-				text-align: center; 
-				display: block; vertical-align: top; 
-				margin: 0 auto;
-			}
-			h1{ 
-				color: $turquesa; font-size: 65px; 
-				span{ color: $morado; }
-			}
-			p{ 
-				color: $morado; font-family: 'frutigerbold', sans-serif; font-size: 28px; font-weight: normal; 
-				line-height: 25px;
-				padding: 15px 0 10px;
-				span{
-					font-family: 'frutiger', sans-serif; font-size: 20px;
-					padding-top: 15px;
-					display: block; vertical-align: top;
-					b, strong{ 
-						color: $morado; font-family: 'frutigerbold', sans-serif; font-size: 20px; font-weight: normal;
-						display: inline-block; vertical-align: top; 
-					}
-				}
-			}
-			.content{
-				background: #fff;
-				width: 100%;
-				margin-top: 67px; padding: 50px 60px;
-				display: block;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;  
-
-				.video{
-					margin-top: -100px;
-					display: block; vertical-align: top;
-					& > *{ width: 100%; height: 425px; }
-				}
-				.compartir{
-					width: 100%;
-					text-align: right;
-					padding: 12px 0;
-					display: block; vertical-align: top;
-					-webkit-box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					box-sizing: border-box;  
-					p{
-						width: auto;
-						font-family: 'frutiger', sans-serif; font-size: 18px; font-weight: 400;
-						line-height: 38px;
-						margin: 0 10px 0 0; padding: 0;
-						display: inline-block; vertical-align: top;
-					}
-					a{
-						background: $morado;
-						width: 38px; height: 38px;
-						text-align: center;
-						margin: 0 0 0 6px;
-						display: inline-block;
-						-webkit-box-sizing: border-box;
-						-moz-box-sizing: border-box;
-						box-sizing: border-box;  
-
-						-webkit-border-radius: 100%;
-						-moz-border-radius: 100%;
-						border-radius: 100%;
-
-						&:before{						
-							color: #fff; font-size: 17px; font-weight: normal;
-							line-height: 40px;
-						}
-					}
-				}
-				.detail{
-					width: 100%;
-					padding: 80px 0 0;
-					display: inline-block; vertical-align: top;	
-					position: relative;
-					.title{
-						display: inline-block; vertical-align: top;
-						position: absolute; z-index: 10; left: -205px; top: 53px;
-						.cont-title{
-							background: url('../image/degrade_001.jpg') center;
-							width: 825px; height: 75px;
+						&.detail{
+							width: 385px; 
 							text-align: right;
-							display: inline-block; vertical-align: top;
-							span{
-								margin: 15px 140px;
-								display: inline-block; vertical-align: top;
-								img{ height: 45px; display: inline-block; vertical-align: top; }
-							}
-							.detalle1, .detalle2, .detalle3, .detalle4{
-								background: url('../image/degrade_001.jpg') center;
-								width: 680px; height: 3px;
-								display: inline-block; vertical-align: top;
-								position: absolute; top: 0; right: 0;
-							}
-							.detalle1{top: -28px;}
-							.detalle2{top: -22px;} 
-							.detalle3{top: -16px;} 
-							.detalle4{top: -10px;} 
-						}
-					}
-					.parrafo{
-						width: 404px;
-						padding: 105px 18px 0 0;
-						display: inline-block; vertical-align: top;
-						-webkit-box-sizing: border-box;
-						-moz-box-sizing: border-box;
-						box-sizing: border-box;  			
-						p{ 
-							width: 100%;
-							color: $morado; font-family: 'frutiger', sans-serif; font-size: 17px; font-weight: normal; 
-							line-height: 23px; text-align: right;
-							margin: 0; padding: 0;
-							display: inline-block; vertical-align: top;
-
-							b, strong{ 
-								color: $morado; font-family: 'frutigerbold', sans-serif; font-size: 24px; font-weight: 700; 
-								line-height: 29px;
-							}
-						}
-					}
-					.image{
-						width: 595px; height: 620px;
-						display: inline-block; vertical-align: top;	
-						position: relative; z-index: 5;
-						.cont-image1,
-						.cont-image2{
-							overflow: hidden;
-							.bg{							
-								width: 200%; height: 200%;
-								position: absolute; top: -50%; left: -50%; 
-								img {
-									min-width: 50%; min-height: 50%;
-									margin: auto; 
-									position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
-								}
-							}
-						}
-						.cont-image1{
-							background: green;
-							width: 100%; height: 100%;
-							position: absolute; z-index: 1; left: 0; top: 0;
-						}
-						.cont-image2{
-							background: red;
-							width: 445px; height: 500px;
-							position: absolute; z-index: 10; left: -395px; bottom: -205px;
-						}
-					}
-				}
-			}
-		}
-	}
-	/*-----------*/
-
-	/*Seccion4*/
-	section.seccion4{
-		background: url('../image/bg-seccion1.jpg') center no-repeat $mora;
-		width: 100%;
-		text-align: center;
-		.cont-center{
-			background: #f0f0f0;
-			width: 100%;
-			text-align: center;
-			margin-top: 0; padding: 45px 0;
-			display: inline-block; vertical-align: top;
-			position: relative; z-index: 10;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;  
-			h1, h2, p{ 
-				width: 100%; 
-				font-family: 'bebasneue', sans-serif; font-weight: normal;
-				text-align: center; 
-				display: block; vertical-align: top; 
-				margin: 0 auto;
-			}
-			h1{ color: $morado; font-size: 80px; }
-			h2{ color: $morado; font-size: 30px; padding: 7px 0; }
-			.image{ padding: 5px 0 9px;}
-			p{ 
-				color: $morado; font-family: 'frutiger', sans-serif; font-size: 19px; font-weight: normal; 
-				line-height: 23px;
-
-				b, strong{ color: $morado; font-family: 'frutiger', sans-serif; font-size: 16px; font-weight: 700; }
-			}
-			.content{
-				background: #fff;
-				width: 100%;
-				padding: 50px 60px;
-				display: block;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;  
-
-				.publicidad{
-					padding: 40px 0 20px;
-					display: inline-block; vertical-align: top;
-					.seccion-left{
-						width: 318px; height: 500px;
-						text-align: center;
-						padding-top: 35px;
-						display: inline-block; vertical-align: top;
-						p{
-							width: 100%;
-							font-family: 'frutigerbold', sans-serif; font-size: 18px; font-weight: normal;
-							padding-top: 20px;
-							display: block; vertical-align: top;
-							span{ padding: 13px; display: block; }
-							a{
-								width: 40%;  
-								margin: 0 5px;
-								display: inline-block; vertical-align: top;
-								img{
-									width: 100%;
-									display: inline-block; vertical-align: top; 
-								}
-							}
-						}
-					}
-					.seccion-right{
-						width: 680px;
-						display: inline-block; vertical-align: top;
-						.video{
-							width: 100%; height: 440px;
-							display: inline-block; vertical-align: top;
-							position: relative;
-							& > *{
-								width: 100%; height: 100%;
-								position: absolute; left: 0; top: 0;
-								display: inline-block; vertical-align: top;
-							}
-						}
-						.compartir{
-							width: 100%;
-							text-align: right;
-							padding: 12px 0 0 0;
-							display: block; vertical-align: top;
+							padding: 25px 0 0 50px;
+							z-index: 15;
 							-webkit-box-sizing: border-box;
 							-moz-box-sizing: border-box;
 							box-sizing: border-box;  
+							h1{
+								color: $morado; font-family: 'bebasneue'; font-size: 36px; font-weight: normal;
+								padding-bottom: 15px;
+								display: block; vertical-align: top;
+							}
 							p{
-								width: auto;
-								color: #00bcd4; font-weight: 400;
-								line-height: 38px;
-								margin: 0 10px 0 0;
-								display: inline-block; vertical-align: top;
+								color: $morado; font-family: 'frutiger'; font-size: 19px; font-weight: lighter;
+								line-height: normal;
+								margin: 0; padding: 0;
+								display: block; vertical-align: top;
 							}
 							a{
-								background: #00bcd4;
-								width: 38px; height: 38px;
-								text-align: center;
-								margin: 0 0 0 6px;
+								background: $morado;
+								width: 175px; height: 30px;
+								color: #fff; font-family: 'frutiger'; font-size: 16px; font-weight: normal;
+								text-align: center; line-height: 30px;
 								display: inline-block;
-								-webkit-box-sizing: border-box;
-								-moz-box-sizing: border-box;
-								box-sizing: border-box;  
-
-								-webkit-border-radius: 100%;
-								-moz-border-radius: 100%;
-								border-radius: 100%;
-
-								&:before{						
-									color: #fff; font-size: 17px; font-weight: normal;
-									line-height: 40px;
+								position: absolute; bottom: -90px; right: -76px;
+								-webkit-border-radius: 30px;
+								-moz-border-radius: 30px;
+								border-radius: 30px;
+								overflow: hidden;
+								i{
+									height: auto;
+									font-size: 0; line-height: normal;
+									margin: 10px 13px;
+									display: inline-block;
+									position: absolute; top: 0; right: 0;
+									&:before{
+										content: '';
+										width: 0; height: 0;
+										border-top: 5px solid transparent;
+										border-left: 10px solid #fff;
+										border-bottom: 5px solid transparent;
+										display: inline-block; vertical-align: top;
+									}
+								}
+							}
+						}
+						&.image{
+							margin: 38px 30px 0;
+							position: absolute; z-index: 5; top: 0; right: 0;
+						}
+					}
+				}
+				.content-center{
+					background: $gris;
+					width: 765px; height: 190px;
+					margin: 30px 0; padding: 35px 60px;
+					display: inline-block; vertical-align: top;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;  
+					h1{
+						color: $morado; font-family: 'bebasneue'; font-size: 55px; font-weight: normal;
+						display: block; vertical-align: top;
+					}
+					p{
+						color: $morado; font-family: 'frutiger'; font-size: 16px; font-weight: lighter;
+						line-height: normal;
+						margin: 0; padding: 0;
+						display: block; vertical-align: top;
+						b{
+							color: $morado; font-family: 'frutigerbold'; font-size: 17.5px;
+							display: block; vertical-align: top;
+							&:nth-child(2){font-size: 22px;}
+						}
+					}
+				}
+				.content-bottom{
+					background: url('../image/degrade_001.jpg') center $gris;
+					background-size: 845px auto;
+					width: 845px; height: 395px;
+					padding: 0 60px;
+					display: inline-block; vertical-align: top;
+					position: relative;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;  
+					.carrusel{
+						width: 100%;
+						display: block; vertical-align: top;
+						.slide{
+							height: 395px;
+							position: relative;
+							.centrador{
+								width: 100%; height: 100%;
+								display: inline-table;
+								position: absolute; left: 0; top: 0;
+								.center{ display: table-cell; vertical-align: middle;}
+							}
+							.image{
+								width: 100%;
+								display: inline-block; vertical-align: top;
+								img{ display: inline-block; vertical-align: top; }
+							}
+							.detail{
+								width: 100%;
+								display: inline-block; vertical-align: top;
+								h2{
+									color: #fff; font-family: 'frutigerbold'; font-size: 25px; font-weight: normal;
+									padding-top: 25px;
+									display: block; vertical-align: top;
+								}
+								p{
+									width: 100%;
+									color: #fff; font-family: 'frutiger'; font-size: 16px; font-weight: lighter;
+									font-style: italic; line-height: 25px;
+									margin: 0; padding-top: 15px;
+									display: block; vertical-align: top;
+									-webkit-box-sizing: border-box;
+									-moz-box-sizing: border-box;
+									box-sizing: border-box;  
+									b{ 
+										font-family: 'frutigerbold'; font-size: 20px;
+										font-style: normal;
+										padding-top: 15px;
+										display: block; vertical-align: top;
+									}
 								}
 							}
 						}
 					}
 				}
-				.galeria{
-					width: 100%;
+				.album-photo{
+					width: 308px; height: 665px;
 					display: inline-block; vertical-align: top;
-					.image{
+					position: absolute; z-index: 10; bottom: 15px; left: 0;
+					& > div{
 						width: 100%;
 						text-align: center;
-						padding: 20px 0;
 						display: inline-block; vertical-align: top;
-						img{display: inline-block; vertical-align: top;}
+						&.group1{
+							padding-left: 25px; 
+							-webkit-box-sizing: border-box;
+							-moz-box-sizing: border-box;
+							box-sizing: border-box;  
+							img{ width: 220px; }
+						}
+						&.group3{
+							img{ width: 220px; }
+						}
+						img{ display: inline-block; vertical-align: top; }
 					}
-					blockquote{
-						background: #555;
-						width: 150px; height: 150px;
-						margin: 8px 6px;
-						display: inline-block; vertical-align: top;
+
+				}
+				.image-chica{
+					width: 475px; height: 856px;
+					display: inline-block; vertical-align: top;
+					position: absolute; z-index: 10; bottom: -35px; right: -34px;
+					img{ width: 100%; height: 100%; }
+				}
+			}
+		}
+		/*-----------*/
+
+		/*Seccion3*/
+		section.seccion3{
+			background: $morado;
+			width: 100%;
+			text-align: center;
+			.cont-center{
+				background: #f0f0f0;
+				width: 100%;
+				text-align: center;
+				margin-top: 0; padding: 35px 0 215px;
+				display: inline-block; vertical-align: top;
+				position: relative; z-index: 10;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;  
+				h1, h2, p{ 
+					width: 80%; 
+					font-family: 'bebasneue'; font-weight: normal;
+					text-align: center; 
+					display: block; vertical-align: top; 
+					margin: 0 auto;
+				}
+				h1{ 
+					color: $turquesa; font-size: 65px; 
+					span{ color: $morado; }
+				}
+				p{ 
+					color: $morado; font-family: 'frutigerbold', sans-serif; font-size: 28px; font-weight: normal; 
+					line-height: 25px;
+					padding: 15px 0 10px;
+					span{
+						font-family: 'frutiger', sans-serif; font-size: 20px;
+						padding-top: 15px;
+						display: block; vertical-align: top;
+						b, strong{ 
+							color: $morado; font-family: 'frutigerbold', sans-serif; font-size: 20px; font-weight: normal;
+							display: inline-block; vertical-align: top; 
+						}
 					}
-					.button-more{
+				}
+				.content{
+					background: #fff;
+					width: 100%;
+					margin-top: 67px; padding: 50px 60px;
+					display: block;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;  
+
+					.video{
+						margin-top: -100px;
+						display: block; vertical-align: top;
+						& > *{ width: 100%; height: 425px; }
+					}
+					.compartir{
 						width: 100%;
-						text-align: center;
-						padding-top: 25px;
-						display: inline-block; vertical-align: top;
-						a{
-							color: $morado; font-family: 'frutiger', sans-serif; font-size: 16px; font-weight: 600; 
-							line-height: normal; text-transform: uppercase;
+						text-align: right;
+						padding: 12px 0;
+						display: block; vertical-align: top;
+						-webkit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						box-sizing: border-box;  
+						p{
+							width: auto;
+							font-family: 'frutiger', sans-serif; font-size: 18px; font-weight: 400;
+							line-height: 38px;
+							margin: 0 10px 0 0; padding: 0;
 							display: inline-block; vertical-align: top;
-							position: relative;
-							&:after{
-								content: '';
-								width: 0; height: 0;
-								border-left: 11px solid transparent;
-								border-right: 11px solid transparent;
-								border-top: 16px solid $morado;
-								margin-top: 10px;
-								display: inline-block; vertical-align: top;
+						}
+						a{
+							background: $morado;
+							width: 38px; height: 38px;
+							text-align: center;
+							margin: 0 0 0 6px;
+							display: inline-block;
+							-webkit-box-sizing: border-box;
+							-moz-box-sizing: border-box;
+							box-sizing: border-box;  
+
+							-webkit-border-radius: 100%;
+							-moz-border-radius: 100%;
+							border-radius: 100%;
+
+							&:before{						
+								color: #fff; font-size: 17px; font-weight: normal;
+								line-height: 40px;
 							}
-							span{ display: block; vertical-align: top; }
+						}
+					}
+					.detail{
+						width: 100%;
+						padding: 80px 0 0;
+						display: inline-block; vertical-align: top;	
+						position: relative;
+						.title{
+							display: inline-block; vertical-align: top;
+							position: absolute; z-index: 10; left: -205px; top: 53px;
+							.cont-title{
+								background: url('../image/degrade_001.jpg') center;
+								width: 825px; height: 75px;
+								text-align: right;
+								display: inline-block; vertical-align: top;
+								span{
+									margin: 15px 140px;
+									display: inline-block; vertical-align: top;
+									img{ height: 45px; display: inline-block; vertical-align: top; }
+								}
+								.detalle1, .detalle2, .detalle3, .detalle4{
+									background: url('../image/degrade_001.jpg') center;
+									width: 680px; height: 3px;
+									display: inline-block; vertical-align: top;
+									position: absolute; top: 0; right: 0;
+								}
+								.detalle1{top: -28px;}
+								.detalle2{top: -22px;} 
+								.detalle3{top: -16px;} 
+								.detalle4{top: -10px;} 
+							}
+						}
+						.parrafo{
+							width: 404px;
+							padding: 105px 18px 0 0;
+							display: inline-block; vertical-align: top;
+							-webkit-box-sizing: border-box;
+							-moz-box-sizing: border-box;
+							box-sizing: border-box;  			
+							p{ 
+								width: 100%;
+								color: $morado; font-family: 'frutiger', sans-serif; font-size: 17px; font-weight: normal; 
+								line-height: 23px; text-align: right;
+								margin: 0; padding: 0;
+								display: inline-block; vertical-align: top;
+
+								b, strong{ 
+									color: $morado; font-family: 'frutigerbold', sans-serif; font-size: 24px; font-weight: 700; 
+									line-height: 29px;
+								}
+							}
+						}
+						.image{
+							width: 595px; height: 620px;
+							display: inline-block; vertical-align: top;	
+							position: relative; z-index: 5;
+							.cont-image1,
+							.cont-image2{
+								overflow: hidden;
+								.bg{							
+									width: 200%; height: 200%;
+									position: absolute; top: -50%; left: -50%; 
+									img {
+										min-width: 50%; min-height: 50%;
+										margin: auto; 
+										position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+									}
+								}
+							}
+							.cont-image1{
+								background: green;
+								width: 100%; height: 100%;
+								position: absolute; z-index: 1; left: 0; top: 0;
+							}
+							.cont-image2{
+								background: red;
+								width: 445px; height: 500px;
+								position: absolute; z-index: 10; left: -395px; bottom: -205px;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-	/*-----------*/
-}
+		/*-----------*/
 
+		/*Seccion4*/
+		section.seccion4{
+			background: url('../image/bg-seccion1.jpg') center no-repeat $mora;
+			width: 100%;
+			text-align: center;
+			.cont-center{
+				background: #f0f0f0;
+				width: 100%;
+				text-align: center;
+				margin-top: 0; padding: 45px 0;
+				display: inline-block; vertical-align: top;
+				position: relative; z-index: 10;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;  
+				h1, h2, p{ 
+					width: 100%; 
+					font-family: 'bebasneue', sans-serif; font-weight: normal;
+					text-align: center; 
+					display: block; vertical-align: top; 
+					margin: 0 auto;
+				}
+				h1{ color: $morado; font-size: 80px; }
+				h2{ color: $morado; font-size: 30px; padding: 7px 0; }
+				.image{ padding: 5px 0 9px;}
+				p{ 
+					color: $morado; font-family: 'frutiger', sans-serif; font-size: 19px; font-weight: normal; 
+					line-height: 23px;
+
+					b, strong{ color: $morado; font-family: 'frutiger', sans-serif; font-size: 16px; font-weight: 700; }
+				}
+				.content{
+					background: #fff;
+					width: 100%;
+					padding: 50px 60px;
+					display: block;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;  
+
+					.publicidad{
+						padding: 40px 0 20px;
+						display: inline-block; vertical-align: top;
+						.seccion-left{
+							width: 318px; height: 500px;
+							text-align: center;
+							padding-top: 35px;
+							display: inline-block; vertical-align: top;
+							p{
+								width: 100%;
+								font-family: 'frutigerbold', sans-serif; font-size: 18px; font-weight: normal;
+								padding-top: 20px;
+								display: block; vertical-align: top;
+								span{ padding: 13px; display: block; }
+								a{
+									width: 40%;  
+									margin: 0 5px;
+									display: inline-block; vertical-align: top;
+									img{
+										width: 100%;
+										display: inline-block; vertical-align: top; 
+									}
+								}
+							}
+						}
+						.seccion-right{
+							width: 680px;
+							display: inline-block; vertical-align: top;
+							.video{
+								width: 100%; height: 440px;
+								display: inline-block; vertical-align: top;
+								position: relative;
+								& > *{
+									width: 100%; height: 100%;
+									position: absolute; left: 0; top: 0;
+									display: inline-block; vertical-align: top;
+								}
+							}
+							.compartir{
+								width: 100%;
+								text-align: right;
+								padding: 12px 0 0 0;
+								display: block; vertical-align: top;
+								-webkit-box-sizing: border-box;
+								-moz-box-sizing: border-box;
+								box-sizing: border-box;  
+								p{
+									width: auto;
+									color: #00bcd4; font-weight: 400;
+									line-height: 38px;
+									margin: 0 10px 0 0;
+									display: inline-block; vertical-align: top;
+								}
+								a{
+									background: #00bcd4;
+									width: 38px; height: 38px;
+									text-align: center;
+									margin: 0 0 0 6px;
+									display: inline-block;
+									-webkit-box-sizing: border-box;
+									-moz-box-sizing: border-box;
+									box-sizing: border-box;  
+
+									-webkit-border-radius: 100%;
+									-moz-border-radius: 100%;
+									border-radius: 100%;
+
+									&:before{						
+										color: #fff; font-size: 17px; font-weight: normal;
+										line-height: 40px;
+									}
+								}
+							}
+						}
+					}
+					.galeria{
+						width: 100%;
+						display: inline-block; vertical-align: top;
+						.image{
+							width: 100%;
+							text-align: center;
+							padding: 20px 0;
+							display: inline-block; vertical-align: top;
+							img{display: inline-block; vertical-align: top;}
+						}
+						blockquote{
+							background: #555;
+							width: 150px; height: 150px;
+							margin: 8px 6px;
+							display: inline-block; vertical-align: top;
+						}
+						.button-more{
+							width: 100%;
+							text-align: center;
+							padding-top: 25px;
+							display: inline-block; vertical-align: top;
+							a{
+								color: $morado; font-family: 'frutiger', sans-serif; font-size: 16px; font-weight: 600; 
+								line-height: normal; text-transform: uppercase;
+								display: inline-block; vertical-align: top;
+								position: relative;
+								&:after{
+									content: '';
+									width: 0; height: 0;
+									border-left: 11px solid transparent;
+									border-right: 11px solid transparent;
+									border-top: 16px solid $morado;
+									margin-top: 10px;
+									display: inline-block; vertical-align: top;
+								}
+								span{ display: block; vertical-align: top; }
+							}
+						}
+					}
+				}
+			}
+		}
+		/*-----------*/
+	}
+}
 /*Acordión*/
 .st-accordion{
-	width:100%;
+	width:100%; height: 100vh;
 	margin: 0 auto;
+	position: relative;
 	ul li{
 		height: auto;
 		overflow: hidden;

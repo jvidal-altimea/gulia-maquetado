@@ -8,6 +8,7 @@ html(lang="es")
 		link(rel="stylesheet", type="text/css", href="css/style.css")
 		link(rel="stylesheet", type="text/css", href="css/responsive.css")
 		link(rel="stylesheet", type="text/css", href="https://fontastic.s3.amazonaws.com/bkQjoWLeS6TGYqbaqSpsfG/icons.css")
+		<!--[if gte IE 9]> <style type="text/css"> .gradient { filter: none; } </style> <![endif]-->
 	body        
 		#guliacd.st-accordion
 			section#inicio.contenido-total.seccion1
@@ -113,22 +114,24 @@ html(lang="es")
 						.st-content
 							aside.cont-center
 								.main
-									h1 
-										|HOY 
-										span Florencia Arenas \ piso 21
-									p 
-										|Flo se lanzó y cumplió un sueño:
-										span
-											b Grabar una canción.
-											br
-											|Y qué mejor que hacerlo con los chicos de Piso 21 luego de su éxito con el irresistible
-											br
-											|boricua Nicky Jam?? Lánzate y 
-											b Dale Play!
+									.content-seccion-up
+										h1 
+											|HOY 
+											span.view_dt Florencia Arenas \ piso 21
+											span.view_mb Flo Arenas piso 21
+										p 
+											|Flo se lanzó y cumplió un sueño:
+											span
+												b Grabar una canción.
+												br
+												|Y qué mejor que hacerlo con los chicos de Piso 21 luego de su éxito con el irresistible
+												br
+												|boricua Nicky Jam?? Lánzate y 
+												b Dale Play!
 
 									.content
 										.video
-											iframe(src="https://www.youtube.com/embed/YODCL5QRYwo?rel=0&enablejsapi=1", frameborder="0", allowfullscreen)#video
+											iframe(src="https://www.youtube.com/embed/YODCL5QRYwo?rel=0", frameborder="0", allowfullscreen)#video
 										.compartir
 											p Comparte
 											a(href="javascript:;", alt="").icon-face
@@ -138,22 +141,21 @@ html(lang="es")
 											.title
 												.cont-title 
 													span
-														//img(src="image/letras-degrade.png", alt="")
 														img(src="image/letras.svg", alt="")
 													.detalle2
 													.detalle3
 													.detalle4
 											.parrafo
 												p 
-													b Flo se atrevió a componer esta
+													b Flo se atrevió a componer esta 
 														br
-														|canción mientras participaba en
+														|canción mientras participaba en 
 														br
 														|Look Cyzone!
-												p 
-													|Los chicos de Piso 21 quisieron hacer una versión
+												p.view_dt
+													|Los chicos de Piso 21 quisieron hacer una versión 
 													br
-													|bailable y más pop, así que se lanzaron con Flo y
+													|bailable y más pop, así que se lanzaron con Flo y 
 													br
 													|mostraron toda una actitud Free
 											.image
@@ -161,6 +163,13 @@ html(lang="es")
 													.bg: img(src="image/hoy/image_big_01.jpg", alt="")
 												.cont-image2
 													.bg: img(src="image/hoy/image_big_02.jpg", alt="")
+											.parrafo.view_mb
+												p
+													|Los chicos de Piso 21 quisieron hacer una versión 
+													br
+													|bailable y más pop, así que se lanzaron con Flo y 
+													br
+													|mostraron toda una actitud Free
 					
 				li.sc3
 					a(href="#", title="").ancla-area.col3
@@ -178,9 +187,9 @@ html(lang="es")
 								.main
 									.content
 										h1 LÁNZATE CON NOSOTROS
-										h2 GANA UNA SALIDA CON LOS CHICOS DE PISO 21!!!
-										.image: img(src="image/seccion4-image01.jpg", alt="")
-										p 
+										h2.view_dt GANA UNA SALIDA CON LOS CHICOS DE PISO 21!!!
+										.image.view_dt: img(src="image/seccion4-image01.jpg", alt="")
+										p.view_dt
 											|Descarga ahora la app Dubsmash en tu celular! Escoge tu parte favorita, dóblala y súbela a
 											br
 											|Instagram o Twitter usando #YoMeLanzo.
@@ -189,20 +198,35 @@ html(lang="es")
 												br
 												|de Piso 21!
 										.publicidad
-											.seccion-left
+											.seccion-left.view_dt
 												img(src="image/phone.jpg", alt="")
 												p 
 													span Disponible en 
 													a(href="javascript:;", alt=""): img(src="image/icons/icons_googleplay.png", alt="")
 													a(href="javascript:;", alt=""): img(src="image/icons/icons_istore.png", alt="")
 											.seccion-right
-												.video: iframe(src="https://www.youtube.com/embed/2cYlnc42wXg", frameborder="0", allowfullscreen="")
+												.video: iframe(src="https://www.youtube.com/embed/2cYlnc42wXg?rel=0", frameborder="0", allowfullscreen="")
 												.compartir
 													p Comparte
 													a(href="javascript:;", alt="").icon-face
 													a(href="javascript:;", alt="").icon-twit
 
-										.galeria
+										.view_mb
+											h2 GANA UNA SALIDA CON LOS CHICOS DE PISO 21!!!
+											.image: img(src="image/seccion4-image01.jpg", alt="")
+											h3 COMO ?!
+											p
+												|Descarga la app Dubsmash y sube un video a Instagram o Twitter usando 
+												b #YoMeLanzo 
+												|doblando la estrofa con la que más te identifiques!
+											.image: img(src="image/seccion4-image01.jpg", alt="")
+											p 
+												span Disponible en 
+												a(href="javascript:;", alt=""): img(src="image/icons/icons_googleplay.png", alt="")
+												a(href="javascript:;", alt=""): img(src="image/icons/icons_istore.png", alt="")
+										
+
+										.galeria.view_dt
 											.image: img(src="image/seccion4-image02.jpg", alt="")
 											blockquote
 											blockquote

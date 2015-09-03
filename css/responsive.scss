@@ -126,11 +126,6 @@
 }
 @media(max-width: 414px){
 	.view_dt{ display: none !important; } .view_mb{ display: block !important; }
-	text { 
-      fill: url(#p-stripes);
-      font-family: 'bebasneue';
-      font-size: 95px;
-  	}
   	.controles .cont-center a{
   		width: 38px;  height: 38px;
   		&.seccion2, &.seccion3, &.seccion4{ margin-top: -65px; } 
@@ -203,7 +198,7 @@
 		    	}
 		    	.content-center{
 		    		width: 90%; height: auto;
-		    		margin-top: 620px; padding: 24px 20px;
+		    		margin-top: 550px; _margin-top: 620px; padding: 24px 20px;
 		    		h1{
 		    			font-size: 0;
 		    			margin-bottom: 13px;
@@ -246,19 +241,22 @@
 					margin: 0 auto; padding: 20px 0;
 					h1{ 
 						width: 100%;
-						 font-size: 110px;
+						font-size: 92px; _font-size: 110px;
 						line-height: normal;
 						span.view_mb{				
-						    width: 172px;		
-						    font-size: 47px;
-						    text-align: left; line-height: 41px;
-						    padding: 19px 0;
+						    width: 150px; _width: 172px;		
+						    font-size: 40px; _font-size: 47px;
+						    text-align: left; line-height: 35px; _line-height: 41px;
+						    padding: 15px 0; _padding: 19px 0;
 						    display: inline-block !important; vertical-align: top;
 						}
 					}
 					p{
 						width: 85%;
+						font-size: 22px;
 						span{
+							font-size: 16px;
+							b{ font-size: 100%; margin: 0 5px 0 0; }
 							br{ display: none; }
 						}
 					}
@@ -267,7 +265,7 @@
 					width: 95%;
 					margin-top: 220px; padding: 0;
 					.video{
-						width: 112%; height: 220px;
+						width: 112%; height: 200px;
 						margin-top: -220px; margin-left: -6%;
 						& > *{ height: 100%; }
 					}
@@ -310,8 +308,8 @@
 							width: 100%;
 							padding: 90px 0 30px 0;
 							&.view_mb{
-								margin-top: 390px; 
-								p{ font-size: 20px; text-align: left; line-height: normal;}
+								margin-top: 290px; _margin-top: 390px; 
+								p{ font-size: 18px; text-align: left; line-height: normal;}
 							}
 						}
 						.image{
@@ -326,12 +324,15 @@
 								}
 							}	
 							.cont-image2{				
-								width: 110%; height: 500px;
-								z-index: 0; top: 250px; right: auto; left: 55px;
+								width: 104%; height: 380px; _height: 400px;
+								z-index: 0; top: 270px; _top: 250px; right: auto; left: 55px;
+								overflow: hidden;
 								.bg{
-									//width: 140%; height: 140%;
-									//top: 0; left: 0;
-									//img{ max-width: 100%; max-height: 100%; }
+									width: 100%; height: 100%;
+									top: 0; left: -18%;
+									img{ 
+										min-width: 140%; max-width: 140%; min-height: auto; max-height: auto; 
+									}
 								}
 							}
 						}
@@ -348,7 +349,7 @@
 				.content{
 					background: transparent;
 					padding: 0 0;
-					h1{ font-size: 48px; }
+					h1{ font-size: 45px; _font-size: 48px; }
 					.publicidad{
 						width: 112%;
 						margin-left: -6%; padding: 20px 0 0;
@@ -433,8 +434,8 @@
 		    .cont-center{
 		    	.content-up {
 		    		div.detail{
-	    			    height: 480px;
-		    			h1{ font-size: 32px; }
+	    			    height: 450px; _height: 480px;
+		    			h1{ font-size: 31px; }
 		    			p{ font-size: 20px; }
 		    			a{
 		    				width: 200px; height: 38px;
